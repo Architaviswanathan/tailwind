@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Tailwind Grid Example</title>
+</head>
+<body class="bg-gray-800 text-white font-sans">
+    <div class="text-center mt-12">
+        <h1 class="text-4xl text-yellow-500 font-bold">Grid of Natural Numbers</h1>
+        <div class="grid grid-cols-3 gap-4 mt-4">
+            <!-- JavaScript will generate natural numbers here -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to generate and insert natural numbers into the grid
+        document.addEventListener("DOMContentLoaded", function () {
+            const gridContainer = document.querySelector(".grid");
+            
+            for (let i = 1; i <= 9; i++) {
+                const numberDiv = document.createElement("div");
+                numberDiv.classList.add("bg-blue-500", "hover:bg-blue-700", "text-white", "font-bold", "py-2", "px-4", "rounded-full", "text-center");
+                numberDiv.textContent = i;
+                gridContainer.appendChild(numberDiv);
+            }
+        });
+    </script>
+</body>
+</html>
